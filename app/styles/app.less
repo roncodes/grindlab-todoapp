@@ -1,0 +1,108 @@
+@import 'preflight';
+@import 'utilities';
+
+/** Presets **/
+body, html,
+body > .ember-view, 
+.liquid-container,
+.liquid-child,
+.mobile-wrapper, 
+.mobile-body {
+    height: 100%;
+}
+
+[data-ember-action], a, button, input, .link {
+  cursor: pointer;
+}
+
+.mbody, .mscroll {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mbody > div:first-child {
+    // margin-top: 70px;
+}
+
+* {
+    outline: none !important;
+    tap-highlight-color:  rgba(0, 0, 0, 0) !important; 
+    touch-callout: none;
+}
+
+span:focus, div:focus, i:focus, button:focus, a:focus, [data-ember-action], input:focus {
+    outline: none !important;
+    tap-highlight-color:  rgba(0, 0, 0, 0) !important; 
+    touch-callout: none;
+    outline-width: 0;
+    outline-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+span, div {
+    user-select: none;
+}
+
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+input {
+    -webkit-appearance: none;
+}
+
+/** App Header **/
+.app-header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background: #4DC0B5;
+}
+
+.app-header > .left {
+    position: relative;
+    z-index: 9999;
+    float: left;
+    width: 15%;
+    line-height: 55px;
+    padding-top: 15px;
+    paddding-left: 5px;
+}
+
+.app-header > .right {
+    position: relative;
+    z-index: 9999;
+    float: right;
+    width: 15%;
+    line-height: 55px;
+    padding-top: 15px;
+    padding-right: 5px;
+}
+
+.app-header > .title {
+    z-index: 0;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 55px;
+    padding-top: 15px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
