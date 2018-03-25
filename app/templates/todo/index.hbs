@@ -2,4 +2,16 @@
     <span class="title text-white">Todo</span>
     {{#link-to "todo.index.new" class="right text-white"}}New{{/link-to}}
 </div>
+<div class="mbody">
+	<div class="container p-6">
+		<ul class="todos">
+			{{#each todos as |todo|}}
+				<li class="clearfix">
+					<span class="float-left">{{todo.title}}</span>
+					<span class="float-right text-red" {{action "deleteTodo" todo on="click"}}>Delete</span>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
 {{outlet}}

@@ -1,1 +1,16 @@
-{{outlet}}
+{{#slide-pane}}
+	<div class="app-header shadow">
+	    <span class="title text-white">Add a new task</span>
+	    {{#link-to "todo.index" class="right text-white"}}Close{{/link-to}}
+	</div>
+	<div class="mbody">
+		<div class="container p-6">
+			<div class="">
+				{{input type="text" value=todo.title class="block rounded border border-grey shadow w-full p-3" placeholder="Add a new task"}}
+			</div>
+			<div class="">
+				<button type="button" class="round w-full text-white p-3 text-center bg-grey-dark my-6 rounded shadow font-semibold" {{action "createTodo" todo on="click"}}>Submit</button>
+			</div>
+		</div>
+	</div>
+{{/slide-pane}}

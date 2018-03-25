@@ -17,6 +17,13 @@ module.exports = function(environment) {
       }
     },
 
+    EmberHammertime: {
+      touchActionOnAction: true,
+      touchActionAttributes: ['onclick'],
+      touchActionSelectors: ['button', 'input', 'a', 'textarea'],
+      touchActionProperties: 'touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;'
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
